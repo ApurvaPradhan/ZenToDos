@@ -1,0 +1,43 @@
+/* Your main stylesheet, e.g., styles.scss */
+
+:root {
+  --highlight-color: #8fac8d;
+  --highlight-color-dark: #4c6e57;
+}
+
+.title {
+  display: inline-block;
+  width: 100%;
+  font-size: 4em;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--highlight-color);
+
+  &::first-letter {
+    color: var(--highlight-color-dark);
+    font-size: 5.5rem;
+    transition: transform 0.5s ease-in-out;
+
+    &:hover {
+      animation: shake 0.5s ease-in-out infinite;
+    }
+  }
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(25px);
+    }
+
+    50% {
+      transform: translateX(-25px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+}
