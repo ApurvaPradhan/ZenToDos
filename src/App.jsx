@@ -5,7 +5,7 @@ import style from "./styles/modules/app.module.scss";
 const App = () => {
   return (
     <div className="container">
-      <PageTitle>ZenToDos</PageTitle>
+      <PageTitle first={<>Z</>} rest={<>enToDos</>}></PageTitle>
       <div className={style.app__wrapper}>
         <AppHeader />
       </div>
